@@ -1,25 +1,29 @@
 public class CashRegister {
 
-    int total = 0;
-    int apples = 0;
-    int bananas = 0;
-    int cherries = 0;
+    private static final int APPLE_PRICE = 100;
+    private static final int BANANA_PRICE = 150;
+    private static final int CHERRY_PRICE = 75;
+    private static final int CHERRY_PRICE_DISCOUNT = 20;
+    private int total = 0;
+    private int apples = 0;
+    private int bananas = 0;
+    private int cherries = 0;
 
     public void add(String product) {
         if (isApple(product)) {
             apples++;
-            total += 100;
+            total += APPLE_PRICE;
         } else if (isBanana(product)) {
             bananas++;
             if (bananas % 2 == 1) {
-                total += 150;
+                total += BANANA_PRICE;
             }
         } else if (isCherry(product)) {
             cherries++;
             if (cherries % 2 == 0) {
-                total += 55;
+                total += CHERRY_PRICE - CHERRY_PRICE_DISCOUNT;
             } else {
-                total += 75;
+                total += CHERRY_PRICE;
             }
         }
     }
