@@ -6,7 +6,7 @@ public class CashRegister {
     int cherries = 0;
 
     public void add(String product) {
-        if ("apple".equals(product) || "manzana".equals(product)) {
+        if ("apple".equals(product) || "manzana".equals(product) || "apfel".equals(product)) {
             apples++;
             total += 100;
         } else if ("banana".equals(product)) {
