@@ -1,3 +1,4 @@
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -90,5 +91,22 @@ public class CashRegisterTest {
         cashRegister.add("apfel");
 
         assertEquals(APPLE_PRICE, cashRegister.total());
+    }
+
+    @Test
+    @Ignore
+    public void iteration5_acceptance_test() {
+        CashRegister cashRegister = new CashRegister();
+
+        cashRegister.add("apfel");
+        cashRegister.add("manzana");
+        cashRegister.add("manzana");
+        cashRegister.add("apple");
+        cashRegister.add("manzana");
+        cashRegister.add("apfel");
+        cashRegister.add("cherry");
+        cashRegister.add("cherry");
+
+        assertEquals(580, cashRegister.total());
     }
 }
