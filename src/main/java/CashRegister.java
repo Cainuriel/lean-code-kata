@@ -50,7 +50,7 @@ public class CashRegister {
 
     public int total() {
         int totalProducts = apples + manzanas + apfels + bananas + cherries;
-        int discount = (int)(totalProducts / 5) * 200;
+        int discount = ((int)(totalProducts / 5)) * 200;
         return total - discount;
     }
 

@@ -141,7 +141,6 @@ public class CashRegisterTest {
     }
 
     @Test
-    @Ignore
     public void iteration6_acceptance_test() {
         CashRegister cashRegister = new CashRegister();
 
@@ -153,6 +152,8 @@ public class CashRegisterTest {
 
         cashRegister.add("banana");
         assertEquals(200, cashRegister.total());
+
+        cashRegister = new CashRegister();
 
         cashRegister.add("apfel");
         cashRegister.add("manzana");
