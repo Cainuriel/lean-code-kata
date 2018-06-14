@@ -1,6 +1,7 @@
 public class CashRegister {
 
     private static final int APPLE_PRICE = 100;
+    private static final int APPLE_PRICE_DISCOUNT = 100;
     private static final int APFEL_PRICE_DISCOUNT = 150;
     private static final int BANANA_PRICE = 150;
     private static final int CHERRY_PRICE = 75;
@@ -15,7 +16,11 @@ public class CashRegister {
     public void add(String product) {
         if ("apple".equals(product)) {
             apples++;
-            total += APPLE_PRICE;
+            if (apples % 4 == 0) {
+                total += APPLE_PRICE - APPLE_PRICE_DISCOUNT;
+            } else {
+                total += APPLE_PRICE;
+            }
         } else if ("manzana".equals(product)) {
             manzanas++;
             if (manzanas % 3 != 0) {
