@@ -115,19 +115,25 @@ public class CashRegisterTest {
     }
 
     @Test
-    public void iteration5a_acceptance_test() {
+    @Ignore
+    public void iteration6_acceptance_test() {
         CashRegister cashRegister = new CashRegister();
 
         cashRegister.add("apfel");
         cashRegister.add("manzana");
         cashRegister.add("manzana");
-        cashRegister.add("apple");
-        cashRegister.add("manzana");
         cashRegister.add("apfel");
-        cashRegister.add("cherry");
-        cashRegister.add("cherry");
-        cashRegister.add("banana");
+        assertEquals(250, cashRegister.total());
 
-        assertEquals(680, cashRegister.total());
+        cashRegister.add("banana");
+        assertEquals(200, cashRegister.total());
+
+        cashRegister.add("apfel");
+        cashRegister.add("manzana");
+        cashRegister.add("manzana");
+        cashRegister.add("apple");
+        cashRegister.add("apfel");
+
+        assertEquals(150, cashRegister.total());
     }
 }
