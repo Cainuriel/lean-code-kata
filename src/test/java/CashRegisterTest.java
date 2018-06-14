@@ -115,8 +115,7 @@ public class CashRegisterTest {
     }
 
     @Test
-    @Ignore
-    public void iteration5_acceptance_test() {
+    public void iteration5a_acceptance_test() {
         CashRegister cashRegister = new CashRegister();
 
         cashRegister.add("apfel");
@@ -127,7 +126,8 @@ public class CashRegisterTest {
         cashRegister.add("apfel");
         cashRegister.add("cherry");
         cashRegister.add("cherry");
+        cashRegister.add("banana");
 
-        assertEquals(580, cashRegister.total());
+        assertEquals(680, cashRegister.total());
     }
 }
