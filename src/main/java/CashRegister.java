@@ -6,15 +6,15 @@ public class CashRegister {
     int cherries = 0;
 
     public void add(String product) {
-        if ("apple".equals(product) || "manzana".equals(product) || "apfel".equals(product)) {
+        if (isApple(product)) {
             apples++;
             total += 100;
-        } else if ("banana".equals(product)) {
+        } else if (isBanana(product)) {
             bananas++;
             if (bananas % 2 == 1) {
                 total += 150;
             }
-        } else if ("cherry".equals(product)) {
+        } else if (isCherry(product)) {
             cherries++;
             if (cherries % 2 == 0) {
                 total += 55;
@@ -26,5 +26,17 @@ public class CashRegister {
 
     public int total() {
         return total;
+    }
+
+    private boolean isApple(String product) {
+        return "apple".equals(product) || "manzana".equals(product) || "apfel".equals(product);
+    }
+
+    private boolean isBanana(String product) {
+        return "banana".equals(product);
+    }
+
+    private boolean isCherry(String product) {
+        return "cherry".equals(product);
     }
 }
