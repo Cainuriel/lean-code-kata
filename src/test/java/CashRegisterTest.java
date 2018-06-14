@@ -38,4 +38,14 @@ public class CashRegisterTest {
 
         assertEquals(0, cashRegister.total());
     }
+
+    @Test
+    public void should_return_the_total_of_two_products() {
+        CashRegister cashRegister = new CashRegister();
+
+        cashRegister.add("banana");
+        cashRegister.add("cherry");
+
+        assertEquals(225, cashRegister.total());
+    }
 }
