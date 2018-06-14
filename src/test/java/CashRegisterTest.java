@@ -20,4 +20,14 @@ public class CashRegisterTest {
 
         assertEquals(150, cashRegister.total());
     }
+
+
+    @Test
+    public void cherry_costs_75_cents() {
+        CashRegister cashRegister = new CashRegister();
+
+        cashRegister.add("cherry");
+
+        assertEquals(75, cashRegister.total());
+    }
 }

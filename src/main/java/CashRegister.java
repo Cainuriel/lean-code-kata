@@ -5,8 +5,10 @@ public class CashRegister {
     public void add(String product) {
         if ("apple".equals(product)) {
             total += 100;
-        } else {
+        } else if ("banana".equals(product)) {
             total += 150;
+        } else if ("cherry".equals(product)) {
+            total += 75;
         }
     }
 
