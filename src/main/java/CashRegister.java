@@ -1,7 +1,7 @@
 public class CashRegister {
 
     private static final int APPLE_PRICE = 100;
-    private static final int APFEL_PRICE_DISCOUNT = 100;
+    private static final int APFEL_PRICE_DISCOUNT = 150;
     private static final int BANANA_PRICE = 150;
     private static final int CHERRY_PRICE = 75;
     private static final int CHERRY_PRICE_DISCOUNT = 20;

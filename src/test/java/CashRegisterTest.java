@@ -105,13 +105,13 @@ public class CashRegisterTest {
     }
 
     @Test
-    public void two_apfel_cost_100_cents() {
+    public void two_apfel_have_a_discount_of_150_cents() {
         CashRegister cashRegister = new CashRegister();
 
         cashRegister.add("apfel");
         cashRegister.add("apfel");
 
-        assertEquals((APPLE_PRICE * 2) - 100, cashRegister.total());
+        assertEquals((APPLE_PRICE * 2) - 150, cashRegister.total());
     }
 
     @Test
