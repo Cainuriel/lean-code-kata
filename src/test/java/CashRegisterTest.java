@@ -68,4 +68,14 @@ public class CashRegisterTest {
 
         assertEquals(150, cashRegister.total());
     }
+
+
+    @Test
+    public void manzana_is_equivalent_to_apple() {
+        CashRegister cashRegister = new CashRegister();
+
+        cashRegister.add("manzana");
+
+        assertEquals(100, cashRegister.total());
+    }
 }
