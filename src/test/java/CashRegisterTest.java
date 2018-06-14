@@ -3,13 +3,18 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class CashRegisterTest {
+
+    private static final int APPLE_PRICE = 100;
+    private static final int BANANA_PRICE = 150;
+    private static final int CHERRY_PRICE = 75;
+
     @Test
     public void apple_costs_100_cents() {
         CashRegister cashRegister = new CashRegister();
 
         cashRegister.add("apple");
 
-        assertEquals(100, cashRegister.total());
+        assertEquals(APPLE_PRICE, cashRegister.total());
     }
 
     @Test
@@ -18,7 +23,7 @@ public class CashRegisterTest {
 
         cashRegister.add("banana");
 
-        assertEquals(150, cashRegister.total());
+        assertEquals(BANANA_PRICE, cashRegister.total());
     }
 
     @Test
@@ -27,7 +32,7 @@ public class CashRegisterTest {
 
         cashRegister.add("cherry");
 
-        assertEquals(75, cashRegister.total());
+        assertEquals(CHERRY_PRICE, cashRegister.total());
     }
 
     @Test
@@ -46,7 +51,7 @@ public class CashRegisterTest {
         cashRegister.add("banana");
         cashRegister.add("cherry");
 
-        assertEquals(225, cashRegister.total());
+        assertEquals(BANANA_PRICE + CHERRY_PRICE, cashRegister.total());
     }
 
     @Test
@@ -66,7 +71,7 @@ public class CashRegisterTest {
         cashRegister.add("banana");
         cashRegister.add("banana");
 
-        assertEquals(150, cashRegister.total());
+        assertEquals(BANANA_PRICE, cashRegister.total());
     }
 
     @Test
@@ -75,7 +80,7 @@ public class CashRegisterTest {
 
         cashRegister.add("manzana");
 
-        assertEquals(100, cashRegister.total());
+        assertEquals(APPLE_PRICE, cashRegister.total());
     }
 
     @Test
@@ -84,6 +89,6 @@ public class CashRegisterTest {
 
         cashRegister.add("apfel");
 
-        assertEquals(100, cashRegister.total());
+        assertEquals(APPLE_PRICE, cashRegister.total());
     }
 }
