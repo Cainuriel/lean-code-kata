@@ -49,7 +49,6 @@ public class CashRegisterTest {
         assertEquals(225, cashRegister.total());
     }
 
-
     @Test
     public void cherries_have_30_cents_discount_buying_two_products() {
         CashRegister cashRegister = new CashRegister();
@@ -58,5 +57,15 @@ public class CashRegisterTest {
         cashRegister.add("cherry");
 
         assertEquals(120, cashRegister.total());
+    }
+
+    @Test
+    public void buy_two_bananas_and_get_one_free() {
+        CashRegister cashRegister = new CashRegister();
+
+        cashRegister.add("banana");
+        cashRegister.add("banana");
+
+        assertEquals(150, cashRegister.total());
     }
 }

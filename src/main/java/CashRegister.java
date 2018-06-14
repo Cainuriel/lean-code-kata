@@ -10,8 +10,10 @@ public class CashRegister {
             apples++;
             total += 100;
         } else if ("banana".equals(product)) {
-            total += 150;
             bananas++;
+            if (bananas % 2 == 1) {
+                total += 150;
+            }
         } else if ("cherry".equals(product)) {
             cherries++;
             if (cherries % 2 == 0) {
