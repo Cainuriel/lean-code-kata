@@ -94,6 +94,17 @@ public class CashRegisterTest {
     }
 
     @Test
+    public void three_manzanas_cost_200_cents() {
+        CashRegister cashRegister = new CashRegister();
+
+        cashRegister.add("manzana");
+        cashRegister.add("manzana");
+        cashRegister.add("manzana");
+
+        assertEquals(APPLE_PRICE * 2, cashRegister.total());
+    }
+
+    @Test
     @Ignore
     public void iteration5_acceptance_test() {
         CashRegister cashRegister = new CashRegister();

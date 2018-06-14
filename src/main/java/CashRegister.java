@@ -10,7 +10,15 @@ public class CashRegister {
     private int cherries = 0;
 
     public void add(String product) {
-        if (isApple(product)) {
+        if ("apple".equals(product)) {
+            apples++;
+            total += APPLE_PRICE;
+        } else if ("manzana".equals(product)) {
+            apples++;
+            if (apples % 3 != 0) {
+                total += APPLE_PRICE;
+            }
+        } else if ("apfel".equals(product)) {
             apples++;
             total += APPLE_PRICE;
         } else if (isBanana(product)) {
@@ -30,10 +38,6 @@ public class CashRegister {
 
     public int total() {
         return total;
-    }
-
-    private boolean isApple(String product) {
-        return "apple".equals(product) || "manzana".equals(product) || "apfel".equals(product);
     }
 
     private boolean isBanana(String product) {
