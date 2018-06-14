@@ -17,7 +17,7 @@ public class CashRegister {
         } else if ("cherry".equals(product)) {
             cherries++;
             if (cherries % 2 == 0) {
-                total += 45;
+                total += 55;
             } else {
                 total += 75;
             }
