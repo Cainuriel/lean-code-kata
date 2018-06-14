@@ -49,7 +49,9 @@ public class CashRegister {
     }
 
     public int total() {
-        return total;
+        int totalProducts = apples + manzanas + apfels + bananas + cherries;
+        int discount = (int)(totalProducts / 5) * 200;
+        return total - discount;
     }
 
     private boolean isBanana(String product) {

@@ -126,6 +126,20 @@ public class CashRegisterTest {
         assertEquals((APPLE_PRICE * 4) - 100, cashRegister.total());
     }
 
+
+    @Test
+    public void buying_five_product_have_a_discount_of_200_cents() {
+        CashRegister cashRegister = new CashRegister();
+
+        cashRegister.add("apple");
+        cashRegister.add("banana");
+        cashRegister.add("cherry");
+        cashRegister.add("manzana");
+        cashRegister.add("apfel");
+
+        assertEquals((APPLE_PRICE * 3 + CHERRY_PRICE + BANANA_PRICE) - 200, cashRegister.total());
+    }
+
     @Test
     @Ignore
     public void iteration6_acceptance_test() {
