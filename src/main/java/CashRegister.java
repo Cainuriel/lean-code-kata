@@ -1,6 +1,7 @@
 public class CashRegister {
 
     private static final int APPLE_PRICE = 100;
+    private static final int APFEL_PRICE_DISCOUNT = 100;
     private static final int BANANA_PRICE = 150;
     private static final int CHERRY_PRICE = 75;
     private static final int CHERRY_PRICE_DISCOUNT = 20;
@@ -20,7 +21,11 @@ public class CashRegister {
             }
         } else if ("apfel".equals(product)) {
             apples++;
-            total += APPLE_PRICE;
+            if (apples % 2 == 0) {
+                total += APPLE_PRICE - APFEL_PRICE_DISCOUNT;
+            } else {
+                total += APPLE_PRICE;
+            }
         } else if (isBanana(product)) {
             bananas++;
             if (bananas % 2 == 1) {
